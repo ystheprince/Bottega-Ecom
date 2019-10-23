@@ -17,14 +17,15 @@ export default function(state = INITIAL_STATE, action) {
                 ...state,
                 headerLinks: action.payload
             }
+
         case SET_NAVBAR_LINKS:
-        const { links, onClick } = action.payload; 
+        const { links, onClick } = action.payload;
             return {
                 ...state,
                 navbarLinks: links,
-                onClick: onClick
+                onClick: onClick 
             }
-        case CHANGE_NAVBAR_ACTIVE: 
+            case CHANGE_NAVBAR_ACTIVE:
             const navbarLinks = state.navbarLinks.map(link => {
                 link.active = false;
                 if(link._id == action.payload) {
@@ -32,10 +33,11 @@ export default function(state = INITIAL_STATE, action) {
                 }
                 return link;
             })
-            return {
-                ...state,
-                navbarLinks
-            }
+                return {
+                    ...state,
+                    navbarLinks
+                }
+
         default: return state;
     }
 }

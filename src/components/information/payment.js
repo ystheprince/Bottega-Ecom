@@ -17,7 +17,7 @@ class Payment extends Component {
     }
 
     onSubmit = (fields) => {
-        
+        console.log(fields);
     }
 
     render() {

@@ -11,7 +11,6 @@ class Purchases extends Component {
 
     render() {
         const { className } = this.props;
-
         return (
             <div className={`${className} purchases`}>
                 {

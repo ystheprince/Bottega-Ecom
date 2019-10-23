@@ -31,6 +31,6 @@ function mapStateToProps(state) {
     }
 }
 
-Header = connect(mapStateToProps)(Header);
+Header = connect(mapStateToProps, {})(Header);
 
 export default Header;

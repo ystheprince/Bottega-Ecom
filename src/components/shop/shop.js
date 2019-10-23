@@ -27,9 +27,9 @@ class Shop extends Component {
         ]
         this.props.setHeaderLinks(headerLinks);
         this.props.fetchShopCategories();
-
-        // filter products with links
+        
         this.props.fetchShopProducts();
+        
     }
 
     shouldComponentUpdate(nextProps) {
@@ -51,9 +51,8 @@ class Shop extends Component {
         }
     }
 
-
     render() {
-        // return <ShopCart className='shop__cart'/>
+        
         return (
             <div className='shop'>
                 <ShopSearchBar onSubmit={this.onSubmit} className='shop__search-bar'/>
@@ -61,15 +60,15 @@ class Shop extends Component {
                     {
                         this.props.filteredProducts.map(product => {
                             return (
-                                <ShopProduct {...product} key={product._id} />
+                               <ShopProduct {...product} key={product._id} />
                             )
                         })
                     }
                 </div>
                 {
-                    this.state.showCart ? <ShopCart className='shop__cart'/> : ''
+                   this.state.showCart ? <ShopCart className='shop__cart'/> : ''
                 }
-                
+
                 <CartButton onClick={this.handleAddToCart} className='shop__cart-button' icon='fas fa-cart-plus'/>
             </div>
         )
@@ -78,10 +77,10 @@ class Shop extends Component {
 
 function mapStateToProps(state) {
     const { categories, filteredProducts } = state.shop;
-    return {
+    return { 
         categories,
         filteredProducts
-    } 
+    }
 }
 
 Shop = connect(mapStateToProps, actions)(Shop);

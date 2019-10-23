@@ -27,6 +27,6 @@ function mapStateToProps(state) {
     return { cartProducts }
 }
 
-ReviewProducts = connect(mapStateToProps)(ReviewProducts);
+ReviewProducts = connect(mapStateToProps, )(ReviewProducts);
 
 export default ReviewProducts;

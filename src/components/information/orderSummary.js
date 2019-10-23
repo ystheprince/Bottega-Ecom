@@ -30,6 +30,6 @@ function mapStateToProps(state) {
     return { cartProducts } 
 }
 
-OrderSummary = connect(mapStateToProps)(OrderSummary);
+OrderSummary = connect(mapStateToProps, {})(OrderSummary);
 
 export default OrderSummary;

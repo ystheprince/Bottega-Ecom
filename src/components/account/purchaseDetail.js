@@ -56,6 +56,6 @@ function mapStateToProps(state) {
     }
 }
 
-PurchaseDetail = connect(mapStateToProps)(PurchaseDetail);
+PurchaseDetail = connect(mapStateToProps, )(PurchaseDetail);
 
 export default PurchaseDetail;

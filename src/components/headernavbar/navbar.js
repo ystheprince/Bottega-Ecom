@@ -11,7 +11,6 @@ class Navbar extends Component {
             this.props.onClick(link._id);
         }
     }
-
     render() {
         return (
             <div className='navbar'>

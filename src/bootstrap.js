@@ -11,7 +11,7 @@ import './style/main.scss';
 
 import history from './history';
 
-import App from './components/app';
+import Layout from './components/layout';
 import Signin from './components/auth/signin';
 import Signup from './components/auth/signup';
 import Account from './components/account/account';
